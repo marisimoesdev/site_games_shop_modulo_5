@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Shop - A sua loja de games</title>
+    <link rel="stylesheet" href="./main.css"> <!--ligando o css com o html-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link de adição de fonte do google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link de adição de fonte do google-->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto&display=swap" rel="stylesheet"> <!--link de adição de fonte do google-->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Games Shop</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#about">Sobre a loja</a>
+                        <!--o # + o id é uma âncora, o que irá acontecer que quando o usuário clicar em cima do link a pág descerá
+                        atá a seção-->
+                    </li>
+                    <li>
+                        <a href="#contact">Contato</a>
+                        <!--o # + o id é uma âncora, o que irá acontecer que quando o usuário clicar em cima do link a pág descerá
+                        atá a seção-->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="about">
+        <div class="container">
+            <img class="store-front" src="./images/loja.jpg" alt="Fachada da loja">
+            <div><!--esse div serve mais para agrupar as tags que estão dentro dela, esse é um dub grupo da div acima-->
+                <h2>Sobre a loja</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nemo vero ad veniam repellat saepe ipsam explicabo eos nisi assumenda illo libero nam illum labore sit, tempore provident. Nostrum, laudantium!
+                </p>
+                <P>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores minus aspernatur et temporibus beatae dolor praesentium, enim reiciendis laborum voluptatem deserunt illo molestiae voluptas ratione! Dolore asperiores reiciendis dicta totam.
+                </P>
+                <ul class="brands-list">
+                    <li>
+                        <img src="./images/nintendo.png" alt="Logo da Nintendo">
+                    </li>
+                    <li>
+                        <img src="./images/xbox.png" alt="Logo do Xbox">
+                    </li>
+                    <li>
+                        <img src="./images/playstation.png" alt="Logo da Plastation">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contact-methods">
+                <div>
+                    <h3>Fale Conosco</h3>
+                    <form>
+                        <input type="text" placeholder="Seu nome" required/>
+                        <!--o propriedade “required” faz com que esse campo seja obrigatório, ou seja, o usuário precisa preenche-lo-->
+                        <input type="email" placeholder="Seu e-mail" required />
+                        <!--o propriedade “required” faz com que esse campo seja obrigatório, ou seja, o usuário precisa preenche-lo-->
+                        <input type="tel" placeholder="Seu telefone (opcional)" />
+                        <textarea placeholder="Sua mensagem" required></textarea>
+                        <!--o propriedade “required” faz com que esse campo seja obrigatório, ou seja, o usuário precisa preenche-lo-->
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div>
+                    <h3>Nos acompanhe</h3>
+                    <ul class="social-links">
+                        <li>
+                            <a href="#" title="Siga-nos no Instagram">
+                                <img src="./images/instagram.png" alt="Logo do Instagram"><!--nessa parte você está colocando a 
+                                imagem dentro da tag link, se o usuário clicar em cima da imagem o mesmo será direcionado para link, 
+                                porém como nesse projeto não tem links então não vai acontecer nada-->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Siga-nos no Facebook">
+                                <img src="./images/facebook.png" alt="Logo do Facebook"><!--nessa parte você está colocando a 
+                                imagem dentro da tag link, se o usuário clicar em cima da imagem o mesmo será direcionado para link, 
+                                porém como nesse projeto não tem links então não vai acontecer nada-->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Visite o nosso canal no YouTube">
+                                <img src="./images/youtube.png" alt="Logo do YouTube"><!--nessa parte você está colocando a 
+                                imagem dentro da tag link, se o usuário clicar em cima da imagem o mesmo será direcionado para link, 
+                                porém como nesse projeto não tem links então não vai acontecer nada-->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Venha até nós</h3>
+                    <p>
+                        Rua JavaScript n° 124, Vila HTML - São Paulo - SP
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>
+                &copy; Games Shop - Todos os direitos reservados - 2023
+                <!--o “&copy” resultará no símbolo do copyright-->
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

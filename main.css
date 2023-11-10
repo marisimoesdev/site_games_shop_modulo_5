@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header { /*cabeçalho*/
+    padding: 16px 0; /*top right bottom left*//*espaçamento interno, ou seja, é o espaço entre o conteúdo e a borda*/
+    background-color: #182c61; /*cor de fundo do cabeçalho*/
+    color: #ecf0f1;
+}
+
+body, /*aqui você está chamando o resto do html, no seletor abaixo, você mudou a fonte do header e da section h2, aqui você está falando que as outras palavras do html que não estão no seletor abaixo deve seguir essa configuração*/
+form input, /*chamando os inputs que estão dentro do forms*/
+form textarea { /*chamando a tag texteatea*/   
+    font-family: 'Roboto', sans-serif;/*mudando a fonte*/
+    /*essa fonte é do google, não basta colocar precisa fazer um negocinho antes no html, assista a aula*/
+}
+
+header,/*chamando o cabeçalho*/
+/*reaproveitando a regra para mais áreas do html*/
+section h2,/*chamando o h2 da tag section*/
+/*reaproveitando a regra para mais áreas do html*/
+section h3, /*chamando o h3 da tag section*/
+/*reaproveitando a regra para mais áreas do html*/
+form button { /*chamando a tag button*/
+    font-family: 'Bungee', sans-serif; /*mudando a fonte*/
+    /*essa fonte é do google, não basta colocar precisa fazer um negocinho antes no html, assista a aula*/
+}
+
+header h1, /*chamando o título do cabeçalho*/
+/*reaproveitando a regra para mais áreas do html*/
+section h2,/*chamando o h2 da tag section*/
+/*reaproveitando a regra para mais áreas do html*/
+section h3{ /*chamando o h3 da tag section*/
+    font-weight: normal; /*esse configuração foi necessário pois o navegador estava automaticamaneto colocando a configuração desse
+    seletor em font-weight: bold; o que estava prejudicando o design da pág, por isso a adição dessa configuração. Pra ver isso 
+    foi necessário apertar a tecla F12 no navegador e clicar em cima da fonte. O navegador fez isso pois o mesmo acreditou essa
+    fonte por ser uma tag h era importante, e por isso aumentou o peso dela, colocou em negrito anteriormente*/
+    /*essa configuração vai deixar a fonte normal, tirar o “negrito” que estava anteriormente, pois o navegador colocou automaticamente*/
+}
+
+header nav li { /*os intens não ordenados do cabeçalho*/
+    display: inline; /*colocano os itens um do lado do outro*/
+    margin-left: 16px; /*inserindo margem a esquerda os itens*/
+    font-size: 18px; /*aumentando a fonte do itens da lista*/
+}
+
+header nav li a { /*os links da lista de intens não ordenados*/
+    /*quando você está trabalhando com link é necessário que você chame ele, exatamente como eu fiz
+    porque se eu tivesse tentado mudar a cor dos links no seletor acima não iria funcionar, pois lá eu estou
+    chamando a tag/container “li” e não a tag “a” que é a tag dos links*/
+    color: #ecf0f1; /*mudando a cor do texto dos links*/
+    text-decoration: none; /*tirando o underline que vem automaticamente nos links*/
+}
+
+.container { /*chamando a classe container*/
+    max-width: 1280px; /*aqui você está falando que ele terá essa largura máxima*/
+    width: 100%; /*aqui você está falando pra ele ocupar o espaço todo, o espaço que me refiro é o que foi
+    estabelecido logo acima. Passou de 1280px ele ficará centralizado na tela*/
+    margin: 0 auto; /*top right bottom left*/ /*colocando margem na pág*/ /*é apartir dese comando que você verá
+    o conteúdo centrelizado na pág quando você diminuir o zoom*/
+}
+
+header .container, /*cabeçalho*/
+/*reaproveitando a regra para outra parte do html*/
+section .container{  /*a tag section e dentro dela a classe container*/
+    /*colocando .container*/
+    display: flex; /*deixando o display flexivel*/
+    align-items: center; /*deixando os links e o título da página na mesma altura*/
+    justify-content: space-between; /*justificando o conteúdo, assim o título fica na extrema esquerda, enquanto
+    os links fica na extrema direita*/
+}
+
+.brands-list img{ /*chamando as imagens que estão dentro da classe brand-list*/
+    height: 24px; /*falando que a altura da imagem pode ter no máximo 24px, assim a largura se adequa automaticamente.
+    e o ao contrário também é verdadeiro*/
+}
+
+.brands-list li { /*chamando os itens não ordenados da classe brands-list*/
+    display: inline; /*colocano os itens um do lado do outro*/
+    margin-right: 8px; /*colocando margem a direita das imagens, assim ela ficaram separadinhas*/
+}
+
+section .container{ /*a tag section e dentro dela a classe container*/
+    align-items: flex-start; /*efeito cascata, lá em cima tem o align-items: center, porém o texto estava bem no meio da tela
+    pra mudar isso nessa parte, foi necessário sobrescrever, ou seja, na parte section .container o align-items que vale é esse,
+    mas é só nessa parte que o seletor está de referênciando*/
+    /*esse flex star faz com que o conteúdo fique no topo ou invés de ficar no meio como estava com o antigo align-items*/
+}
+
+section { /*a tag section*/
+    padding: 24px 0; /*top right bottom left*//*espaçamento interno, ou seja, é o espaço entre o conteúdo e a borda*/
+}
+
+section h2 { /*chamando o título h2 da tag section*/
+    margin-bottom: 16px; /*colocando margem embaixo do título*/
+}
+
+section { /*chamando a tag section*/
+    color: #182c61; /*mudando a cor de todos os textos que estão dentro da tag section*/
+}
+
+section p { /*chamando o parágrafa da tag section*/
+    margin-bottom: 8px; /*colocando margem embaixo do parágrafo*/
+}
+
+.store-front {/*chamando a imagem que está dentro da classe store-front, se não colocasse essa classe nessa imagem essa regra também
+    afetaria as outras imagens da tag section*/
+    margin-right: 32px; /*colocando margem do lado direito da imagem, é nesse comando que a imagem ficou separada do parágrafo*/
+}
+
+.social-links img { /*chamando as imagens que estão dentro da classe social-links*/
+    height: 24px; /*falando que a altura da imagem pode ter no máximo 24px, assim a largura se adequa automaticamente.
+    e o ao contrário também é verdadeiro*/
+}
+
+.social-links li { /*chamando o itens da lista não ordenada que estão dentro da classe social-links*/
+    display: inline; /*colocano os itens um do lado do outro*/
+    margin-right: 8px; /*colocando margem do lado direito dos itens*/
+}
+
+.social-links li a { /*chamando os links dos itens da lista não ordenada que estão dentro da classe social-links*/
+    text-decoration: none; /*tirando o underline que vem automaticamente nos links, no caso de se tratar de imagens
+    não estava aparecendo um undeline, mas sim uma pequena sujidade ao lado das imagens*/
+}
+
+#contact .container{ /*chamando a classe .container que está dentro do id contact. As outras partes que tem a classe .container não
+    sofreram com essa regra, por conta do id contact que foi criado só pra essa par do html*/
+    display: block; /*colocando os elementos em forma de bloco/coluna*/
+}
+
+.contact-methods { /*chamando a classe contact-methods, essa classe é um sub grupo do seletor acima*/
+    display: flex; /*deixano o display flexível*/
+    justify-content: space-between; /*justificando o conteúdo, assim o “Fale Conosco” “Nos acompanhe” e “Venha até nós” ficaram separados
+    de forma igualitária na pág*/
+}
+
+form input, /*chamando os inputs que estão dentro do forms*/
+form textarea, /*chamando a tag texteatea*/
+form button {/*chamando a tag button*/
+    display: block; /*colocando os elementos em forma de bloco/coluna*/
+    width: 320px; /*aqui você está falando quanto tem que ser a largura dos inputs/retângulos*/
+    margin-bottom: 8px; /*colocando uma margem embaixo de cada retângulo*/
+    padding: 8px; /*espaçamento interno, ou seja, é o espaço entre o conteúdo e a borda, ou seja, dentro dos retângulos*/
+} 
+
+form textarea { /*chamando a tag texteatea*/
+    resize: none; /*aqui você está desabilitando aquela função de poder redimencionar o campo do textearea, são aqueles
+    3 risquinho, agora com essa configuração não terá mais*/ /*essa configuração é necessária, pois a redimendionamento
+    do campo do textarea poderia estragar o nosso layout*/
+    height: 180px; /*mudando a altura do textearea, nesse caso você está aumentando*/
+}
+
+section h3 { /*chamando o h3 da tag section*/
+    margin-bottom: 16px /*adicionando margem embaixo dos h3*/;
+}
+
+form button { /*chamando a tag button*/
+    background-color: #182c61; /*mudando a cor de fundo do botão*/
+    color: #ecf0f1; /*mudando a cor do texto que está dentro do botão*/
+    border: none; /*tirando uma bordinha preta que tinha no botão*/
+    cursor: pointer; /*essa propriedade fará com que quando o usuário passar o mouse em cima do botão, o cursão deixará de ser
+    uma setinha e e tornará uma mãozinha*/
+}
+
+form button:hover { /*chamando a tag button*/
+    /*O :hover é para colocar algum tipo e efeito no elemento quando o usuário passar o mouse*/
+    background-color: #314e9c; /*quando o usuário passar o mauso em cima do botão o mesmo mudará de cor*/
+}
+
+input:focus, /*chamando os inputs que estão dentro do forms, também pode ser chamado assim*/
+textarea:focus{ /*chamando a tag texteatea, também pode ser chamado assim*/
+    /*O :focus é pra quando o elemento estiver em foco, nesse caso, quando o usuário clicar nele ele ficará em foco*/
+    outline-color: #182c61; /*aqui você está mudando a cor da borda de preto pra essa cor, ou seja, quando esse elementos
+    estiverem em foco (que será quando o usuário clicar sobre ele) a borda desse elemento ficará dessa cor*/
+}
+
+footer{ /*chamando a tag footer*/
+    background-color: #182c61; /*mudando a cor de fundo*/
+    color: #ecf0f1; /*mudando a cor do texto*/
+    padding: 16px 0; /*top right bottom left*//*espaçamento interno, ou seja, é o espaço entre o conteúdo e a borda*/
+}
